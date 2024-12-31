@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saint Louis School - Career Opportunities</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Amatic+SC:wght@400;700&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Lobster&family=Mochiy+Pop+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Platypi:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="IMG/Bida2.png" alt="Saint Louis School Logo" />
+          <h1>Saint Louis School</h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Professional Screening Portal</h2>
+        <p>
+          Welcome to our job application assessment portal. Please select your
+          desired position below to begin the screening process. Take your time
+          to answer all questions thoughtfully and honestly.
+        </p>
+      </section>
+
+      <div class="positions">
+        <div class="position-card">
+          <h3>Secretary</h3>
+
+          <a
+            href="https://forms.gle/webapL5NmCm8Cayb6"
+            class="apply-btn"
+            target="_blank"
+            >Start Screening</a
+          >
+        </div>
+
+        <div class="position-card">
+          <h3>Accountant</h3>
+
+          <a
+            href="https://forms.gle/gHC3ww33JcTHu5vt6"
+            class="apply-btn"
+            target="_blank"
+            >Start Screening</a
+          >
+        </div>
+
+        <div class="position-card">
+          <h3>Teacher</h3>
+
+          <a
+            href="https://forms.gle/JzA2w9QrVDxzbd789"
+            class="apply-btn"
+            target="_blank"
+            >Start Screening</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>© 2024 Saint Louis School. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Add smooth scrolling for navigation links
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const section = document.querySelector(this.getAttribute("href"));
+          window.scrollTo({
+            top: section.offsetTop - 100,
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Add animation for position cards on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".position-card").forEach((card) => {
+        card.style.opacity = 0;
+        card.style.transform = "translateY(20px)";
+        observer.observe(card);
+      });
+    </script>
+  </body>
+</html>
