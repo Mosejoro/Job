@@ -31,6 +31,7 @@ header {
 
 .logo img {
   width: 5rem;
+  animation: Job 2s linear infinite;
 }
 
 .logo h1 {
@@ -134,4 +135,15 @@ footer {
   margin: 0 auto;
   text-align: center;
   color: var(--secondary-color);
+}
+@keyframes Job {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
